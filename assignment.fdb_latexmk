@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742846367.45701 "c:/Users/ninav/Latex-trial/assignment.tex" "assignment.pdf" "assignment" 1742846371.7178 0
+["pdflatex"] 1742851270.05389 "c:/Users/ninav/Latex-trial/assignment.tex" "assignment.pdf" "assignment" 1742851274.29894 0
   "_minted/02114B2C219B24FECC1308644C0D8D62.highlight.minted" 1742840806 794 7f8eca55f2544c36d8d6355078bbd0a8 ""
   "_minted/06EC138C7E11EDE7305E3E06556F182A.highlight.minted" 1742841749 597 690b7fb0e64da950b6f6b1c42d8fb655 ""
   "_minted/2BEBA904DBAEABDB54064D7F82243C52.highlight.minted" 1742840342 352 72a3e43a80b0e4a729feb47a05753627 ""
@@ -13,11 +13,11 @@
   "_minted/F1F80690E2CB167DDF6F021C44602D94.highlight.minted" 1742839754 458 336b8fb5d915be9ef70404742c7d6f86 ""
   "_minted/_AFB7BBEB1ADCA3D11F0BFB38E1F7F856.index.minted" 1742845942 857 2671e298633cf2aecec9f7d9a32456a6 ""
   "_minted/default.style.minted" 1742839121 6526 e1fb43a91491f41b33310478eee48cdb ""
-  "assignment.aux" 1742846371 360 cfe2c86c24f18dc5fa326651fe363a1b "pdflatex"
-  "assignment.listing" 1742846371 88 bee1af57fae45a28efb03750103462b4 "pdflatex"
-  "assignment.out" 1742846368 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "assignment.tex" 1742846366 10595 572e7678621e0f64370210aa095c4caf ""
-  "c:/Users/ninav/Latex-trial/assignment.tex" 1742846366 10595 572e7678621e0f64370210aa095c4caf ""
+  "assignment.aux" 1742851274 360 cfe2c86c24f18dc5fa326651fe363a1b "pdflatex"
+  "assignment.listing" 1742851274 88 bee1af57fae45a28efb03750103462b4 "pdflatex"
+  "assignment.out" 1742851271 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "assignment.tex" 1742851269 12628 8efd00d5f9d42106f927d96fd865644e ""
+  "c:/Users/ninav/Latex-trial/assignment.tex" 1742851269 12628 8efd00d5f9d42106f927d96fd865644e ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1742820482 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1742820482 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1742820482 2327 9d6df24f9c4f7368395224341a95523a ""

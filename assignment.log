@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  25 MAR 2025 01:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  25 MAR 2025 02:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -843,10 +843,10 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \pydata@fh@_AFB7BBEB1ADCA3D11F0BFB38E1F7F856.data.minted=\write8
 \openout8 = `_AFB7BBEB1ADCA3D11F0BFB38E1F7F856.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250325012927 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
+runsystem(latexminted config  --timestamp 20250325025110 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
 
  (./_AFB7BBEB1ADCA3D11F0BFB38E1F7F856.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250325012927 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
+runsystem(latexminted cleanconfig  --timestamp 20250325025110 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
 
  (./_minted/default.style.minted) (./_minted/954A3B2CDB7D885A4479B2BB2F762D11.highlight.minted
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1.
@@ -903,20 +903,20 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 \c@pytx@py@default@default@line=\count385
  (./pythontex-files-assignment/py_default_default_0.stdout)
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 185.
-\openout7 = `assignment.listing'.
-
- (./_minted/7D904B206604FC4533F32E766070E3F2.highlight.minted)
 
 [1
 
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 193.
+\openout7 = `assignment.listing'.
+
+ (./_minted/7D904B206604FC4533F32E766070E3F2.highlight.minted)
 \openout7 = `assignment.listing'.
 
  (./_minted/2BEBA904DBAEABDB54064D7F82243C52.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 205.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 213.
 
 \openout7 = `assignment.listing'.
 
@@ -929,19 +929,21 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 2
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 227.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 244.
 
 \openout7 = `assignment.listing'.
 
 (./_minted/9DFC776E9BAE08E055E65C90B3AE5455.highlight.minted)
+
+[2]
 \openout7 = `assignment.listing'.
 
  (./_minted/D3A251D7FE7177EDB0F6332E3030384A.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 248.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 265.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
@@ -949,21 +951,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
 (./_minted/C40C97FEBCC5A3B0AF6F87264E70C8F5.highlight.minted)
 
-[2]
-
-LaTeX Warning: Characters dropped after `\end{python}' on input line 264.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 281.
 
 \openout7 = `assignment.listing'.
 
 (./_minted/4DCD3B69568489985BA5C5F5B8E09495.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 281.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 298.
 
 \openout7 = `assignment.listing'.
 
 (./_minted/06EC138C7E11EDE7305E3E06556F182A.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 296.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 313.
 
 
 
@@ -984,7 +984,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  124i,7n,121p,819b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on assignment.pdf (3 pages, 198328 bytes).
+Output written on assignment.pdf (3 pages, 202879 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  78 compressed objects within 1 object stream

@@ -422,6 +422,11 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT ./pythontex-files-assignment/py_default_default_0.stdout
 INPUT ./pythontex-files-assignment/py_default_default_0.stdout
 INPUT pythontex-files-assignment/py_default_default_0.stdout
+INPUT c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmtk10.tfm
 OUTPUT assignment.listing
 INPUT ./assignment.listing
@@ -429,11 +434,6 @@ INPUT ./assignment.listing
 INPUT ./_minted/7D904B206604FC4533F32E766070E3F2.highlight.minted
 INPUT ./_minted/7D904B206604FC4533F32E766070E3F2.highlight.minted
 INPUT _minted/7D904B206604FC4533F32E766070E3F2.highlight.minted
-INPUT c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
-INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
-INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 OUTPUT assignment.listing
 INPUT ./assignment.listing
 INPUT ./assignment.listing

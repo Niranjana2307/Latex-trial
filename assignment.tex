@@ -158,14 +158,14 @@ Output: [[4, 9, 16], [9, 16, 25], [16, 25, 36]]
 
 \noindent\textbf{Explanation} \\
 
-Recall that nested list comprehension consists of list comprehensions within a list comprehension. Expression inside \texttt{[ ]} is called list comprehension.
+Recall that nested list comprehension consists of list comprehensions within a list comprehension. Expression inside \texttt{[]} is called list comprehension.
 \begin{itemize}
-    \item In this code, outer list comprehension \colorbox{gray!20}{\texttt{for i in range(1, 4)}}
-    which generates values $i = 1,2,3$
-    \item For each value of \texttt{i}, inner list comprehension \colorbox{gray!20}{\texttt{ for j in range(1, 4)}}
-    generates values $j = 1,2,3$
+    \item In this code, the outer list comprehension \colorbox{gray!20}{\texttt{for i in range(1, 4)}}
+    which generates values $i = 1,2,3$.
+    \item For each value of \texttt{i}, the inner list comprehension \colorbox{gray!20}{\texttt{ for j in range(1, 4)}}
+    generates values $j = 1,2,3$.
     \item For each pair of \texttt{i} and \texttt{j}, the expression \colorbox{gray!20}{\texttt{(i + j) ** 2}} is computed.
-    \item For each iteration of \texttt{i}, the computed result is stored as a sublist and the final result is the list of all these sublists
+    \item For each iteration of \texttt{i}, the computed result is stored as a sublist and the final result is the list of all these sublists.
     \item \textbf{Step by step evaluation}
     \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
     \begin{pycode}
@@ -179,9 +179,17 @@ for i in range(1, 4):
     print("\nSublist for i = {0}: {1}\n".format(i, result))
     \end{pycode}
     \end{tcolorbox}
-\end{itemize}
-
-
+    \item \textbf{Scope of the variables:} 
+    \begin{itemize}
+        \item In python, in the nested \texttt{for} loop, the inner loop has the same scope as that of the enclosing scope. Thus, outer loop variables defined before the inner loop can be directly referenced by the inner loop.   
+        \item While in nested list comprehension, each list comprehension creates its own local scope. 
+        \item Still, the inner list comprehension can access the variables local to the outer comprehension. This is due to the property called \textbf{Closures}. The inner list comprehension can access the variables from the enclosing scope.
+        \item In this code, the non-local variable \texttt{i} which is in the scope of outer comprehension,  can be accessed as a free variable by inner list comprehension. This means, \texttt{i} is not bound to the inner comprehension, but is stored in a closure. This repeats for each iteration of \texttt{i}.
+        \item This can be evident from this line of byte-level code  \colorbox{gray!20}{\texttt{LOAD\_CLOSURE 1 (i)}}.
+    \end{itemize}
+    
+\end{itemize} 
+\bigskip  
 \subsection*{G1.2 (M) Converting a \texttt{for} Loop to a Nested List Comprehension}
 
 \textbf{Question}
@@ -206,6 +214,15 @@ new_matrix = [[num + 2 for num in row] for row in matrix]
 
 \noindent\textbf{Explanation}
 
+\begin{itemize}
+    \item \textbf{Explanation of nested \texttt{for} loops:} The outer \texttt{for} loop iterates through each row in the matrix.
+    The inner loop iterates through each number in the row and creates a new row by appending $2$ to each number in the original row.
+    The new rows are appended to create the new matrix. 
+    \item \textbf{Creating list comprehension:} Replace the outer loop with \colorbox{gray!20}{\texttt{[..for row in matrix]}}. In the inner loop, for each \texttt{num} in row,  \colorbox{gray!20}{\texttt{num + $2$}} expression should be executed. Replace the inner loop  with \colorbox{gray!20}{\texttt{[num + $2$ for num in row]}}.
+    \item Finally, all the modified rows are appended to create \texttt{new\_matrix}. The list comprehension implicitly builds the list and there is no need for  \colorbox{gray!20}{\texttt{append}} function.
+   
+   
+\end{itemize}
 \section*{KP2. Using Nested List Comprehensions with Strings}
 \subsection*{G2.1 (E) Predicting Output for Uppercasing Nested Words}
 
