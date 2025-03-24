@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Allow only specific files
+!assignment.ipynb
+!assignment.tex
+!README.md
+!assignment.pdf
