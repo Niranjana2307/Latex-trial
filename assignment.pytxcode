@@ -7,6 +7,21 @@ for i in range(1, 4):
         print("\n")
         result.append((i + j) ** 2)
     print("\nSublist for i = {0}: {1}\n".format(i, result))
+=>PYTHONTEX#py#default#default#1#code#####256#
+sentence = "I am happy"
+# Split sentence into words
+words_list = sentence.split()
+print("Words List:\n", words_list)
+
+# Process each word separately
+result = []
+for word in words_list:
+  char_list=[]
+  print("\nword\t","char\t","upper\t".expandtabs(4))
+  for char in word:
+    print("\n{0}\t {1}\t {2}\t".format(word, char, char.upper()).expandtabs(4))
+    char_list.append(char.upper())  # Convert each char in word to uppercase
+  print(f"\nSublist '{word}':", char_list)
 =>PYTHONTEX:SETTINGS#
 version=0.18
 outputdir=pythontex-files-assignment

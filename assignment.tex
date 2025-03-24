@@ -245,6 +245,36 @@ Output: [['I'], ['A', 'M'], ['H', 'A', 'P', 'P', 'Y']]
 
 \noindent\textbf{Explanation}
 
+\begin{itemize}
+    \item Method \colorbox{gray!20}{\texttt{sentence.split()}} splits the sentence and creates a \textbf{list} of individual words.
+    \item Methods \colorbox{gray!20}{\texttt{char.upper()}} turns lowercase character into an uppercase character.
+    \item \textbf{Outer comprehension:} It iterates through each \texttt{word} in the list of individual words created by \colorbox{gray!20}{\texttt{.split()}} method.
+    \item \textbf{Inner comprehension:} It iterates through each \texttt{char} in the \texttt{word} and converts the character into uppercase using \colorbox{gray!20}{\texttt{.upper()}} method. If the \texttt{char} is already in uppercase, it does nothing. For each word, the list of its uppercase characters is created.
+    \item The final list is the collection of sublists of uppercase letters of individual words.
+    \item \textbf{Step by step evaluation}
+    \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
+    \begin{pycode}
+sentence = "I am happy"
+# Split sentence into words
+words_list = sentence.split()
+print("Words List:\n", words_list)  
+
+# Process each word separately
+result = []
+for word in words_list:
+  char_list=[]
+  print("\nword\t","char\t","upper\t".expandtabs(4))
+  for char in word:
+    print("\n{0}\t {1}\t {2}\t".format(word, char, char.upper()).expandtabs(4))
+    char_list.append(char.upper())  # Convert each char in word to uppercase
+  print(f"\nSublist '{word}':", char_list)  
+    \end{pycode}
+    \end{tcolorbox} 
+\end{itemize}
+
+
+
+
 \section*{KP3. Using Nested List Comprehensions with Conditions}
 \subsection*{G3.1 (E) Creating a Nested List of Filtered Words}
 

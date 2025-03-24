@@ -456,6 +456,9 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmtt.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmtt.fd
 INPUT c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmtt.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1-lmtt10.tfm
+INPUT ./pythontex-files-assignment/py_default_default_1.stdout
+INPUT ./pythontex-files-assignment/py_default_default_1.stdout
+INPUT pythontex-files-assignment/py_default_default_1.stdout
 OUTPUT assignment.listing
 INPUT ./assignment.listing
 INPUT ./assignment.listing

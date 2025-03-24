@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  25 MAR 2025 02:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.24)  25 MAR 2025 03:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -843,10 +843,10 @@ File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \pydata@fh@_AFB7BBEB1ADCA3D11F0BFB38E1F7F856.data.minted=\write8
 \openout8 = `_AFB7BBEB1ADCA3D11F0BFB38E1F7F856.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250325025110 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
+runsystem(latexminted config  --timestamp 20250325031903 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
 
  (./_AFB7BBEB1ADCA3D11F0BFB38E1F7F856.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250325025110 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
+runsystem(latexminted cleanconfig  --timestamp 20250325031903 AFB7BBEB1ADCA3D11F0BFB38E1F7F856)...executed safely (allowed).
 
  (./_minted/default.style.minted) (./_minted/954A3B2CDB7D885A4479B2BB2F762D11.highlight.minted
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1.
@@ -931,19 +931,20 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 LaTeX Warning: Characters dropped after `\end{python}' on input line 244.
 
-\openout7 = `assignment.listing'.
-
-(./_minted/9DFC776E9BAE08E055E65C90B3AE5455.highlight.minted)
+(./pythontex-files-assignment/py_default_default_1.stdout)
 
 [2]
 \openout7 = `assignment.listing'.
 
+ (./_minted/9DFC776E9BAE08E055E65C90B3AE5455.highlight.minted)
+\openout7 = `assignment.listing'.
+
  (./_minted/D3A251D7FE7177EDB0F6332E3030384A.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 265.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 295.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
@@ -951,23 +952,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
 (./_minted/C40C97FEBCC5A3B0AF6F87264E70C8F5.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 281.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 311.
 
 \openout7 = `assignment.listing'.
 
 (./_minted/4DCD3B69568489985BA5C5F5B8E09495.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 298.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 328.
 
+
+
+[3]
 \openout7 = `assignment.listing'.
 
-(./_minted/06EC138C7E11EDE7305E3E06556F182A.highlight.minted)
+ (./_minted/06EC138C7E11EDE7305E3E06556F182A.highlight.minted)
 
-LaTeX Warning: Characters dropped after `\end{python}' on input line 313.
+LaTeX Warning: Characters dropped after `\end{python}' on input line 343.
 
 
 
-[3] (./assignment.aux)
+[4] (./assignment.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -976,18 +980,18 @@ Package rerunfilecheck Info: File `assignment.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34315 strings out of 473190
- 729061 string characters out of 5719979
- 1280056 words of memory out of 5000000
- 56934 multiletter control sequences out of 15000+600000
+ 34323 strings out of 473190
+ 729400 string characters out of 5719979
+ 1283056 words of memory out of 5000000
+ 56938 multiletter control sequences out of 15000+600000
  604849 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  124i,7n,121p,819b,1162s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on assignment.pdf (3 pages, 202879 bytes).
+Output written on assignment.pdf (4 pages, 205622 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 131 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
