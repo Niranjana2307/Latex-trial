@@ -1,4 +1,4 @@
-**Solution - Introduction to Computer Science I**
+# **Solution - Introduction to Computer Science I**
 
 _New SME Trial Task_ 
 
