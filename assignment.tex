@@ -1,6 +1,128 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage[top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
+\documentclass[10pt]{extarticle}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,mathrsfs}
+\usepackage{xparse}
+\usepackage[inline,shortlabels]{enumitem}
+\setlist{topsep=2pt,itemsep=2pt,parsep=0pt,partopsep=0pt}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,top=0.5in,bottom=0.2in,left=0.5in,right=0.5in,footskip=0.3in,includefoot]{geometry}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{minted} % tcolorbox minted library, required to use the "minted" tcb listing engine (this library is not loaded by the option [most])
+\usepackage{minted} % Allows input of raw code, such as Python code
+\usepackage[colorlinks]{hyperref} % ALWAYS load this package LAST
+
+% Custom tcolorbox style for Python code (not the code or the box it appears in, just the options for the box)
+\tcbset{
+    pythoncodebox/.style={
+        enhanced jigsaw,breakable,
+        colback=gray!10,colframe=gray!20!black,
+        boxrule=1pt,top=2pt,bottom=2pt,left=2pt,right=2pt,
+        sharp corners,before skip=10pt,after skip=10pt,
+        attach boxed title to top left,
+        boxed title style={empty,
+            top=0pt,bottom=0pt,left=2pt,right=2pt,
+            interior code={\fill[fill=tcbcolframe] (frame.south west)
+                --([yshift=-4pt]frame.north west)
+                to[out=90,in=180] ([xshift=4pt]frame.north west)
+                --([xshift=-8pt]frame.north east)
+                to[out=0,in=180] ([xshift=16pt]frame.south east)
+                --cycle;
+            }
+        },
+        title={#1}, % Argument of pythoncodebox specifies the title
+        fonttitle=\sffamily\bfseries
+    },
+    pythoncodebox/.default={}, % Default is No title
+    %%% Starred version has no frame %%%
+    pythoncodebox*/.style={
+        enhanced jigsaw,breakable,
+        colback=gray!10,coltitle=gray!20!black,colbacktitle=tcbcolback,
+        frame hidden,
+        top=2pt,bottom=2pt,left=2pt,right=2pt,
+        sharp corners,before skip=10pt,after skip=10pt,
+        attach boxed title to top text left={yshift=-1mm},
+        boxed title style={empty,
+            top=0pt,bottom=0pt,left=2pt,right=2pt,
+            interior code={\fill[fill=tcbcolback] (interior.south west)
+                --([yshift=-4pt]interior.north west)
+                to[out=90,in=180] ([xshift=4pt]interior.north west)
+                --([xshift=-8pt]interior.north east)
+                to[out=0,in=180] ([xshift=16pt]interior.south east)
+                --cycle;
+            }
+        },
+        title={#1}, % Argument of pythoncodebox specifies the title
+        fonttitle=\sffamily\bfseries
+    },
+    pythoncodebox*/.default={}, % Default is No title
+}
+
+% Custom tcolorbox for Python code (not the code itself, just the box it appears in)
+\newtcolorbox{pythonbox}[1][]{pythoncodebox=#1}
+\newtcolorbox{pythonbox*}[1][]{pythoncodebox*=#1} % Starred version has no frame
+
+% Custom minted environment for Python code, NOT using tcolorbox
+\newminted{python}{autogobble,breaklines,mathescape}
+
+% Custom tcblisting environment for Python code, using the "minted" tcb listing engine
+% Adapted from https://tex.stackexchange.com/a/402096
+\NewTCBListing{python}{ !O{} !D(){} !G{} }{
+    listing engine=minted,
+    listing only,
+    pythoncodebox={#1}, % First argument specifies the title (if any)
+    minted language=python,
+    minted options/.expanded={
+        autogobble,breaklines,mathescape,
+        #2 % Second argument, delimited by (), denotes options for the minted environment
+    },
+    #3 % Third argument, delimited by {}, denotes options for the tcolorbox
+}
+
+%%% Starred version has no frame %%%
+\NewTCBListing{python*}{ !O{} !D(){} !G{} }{
+    listing engine=minted,
+    listing only,
+    pythoncodebox*={#1}, % First argument specifies the title (if any)
+    minted language=python,
+    minted options/.expanded={
+        autogobble,breaklines,mathescape,
+        #2 % Second argument, delimited by (), denotes options for the minted environment
+    },
+    #3 % Third argument, delimited by {}, denotes options for the tcolorbox
+}
+
+% verbbox environment, for showing verbatim text next to code output (for package documentation and user learning purposes)
+\NewTCBListing{verbbox}{ !O{} }{
+    listing engine=minted,
+    minted language=latex,
+    boxrule=1pt,sidebyside,skin=bicolor,
+    colback=gray!10,colbacklower=white,valign=center,
+    top=2pt,bottom=2pt,left=2pt,right=2pt,
+    #1
+} % Last argument allows more tcolorbox options to be added
+
+\setlength{\parindent}{0.2in}
+\setlength{\parskip}{0pt}
+\setlength{\columnseprule}{0pt}
+
+\makeatletter
+% Redefining the title block
+\renewcommand\maketitle{
+    \null\vspace{4mm}
+    \begin{center}
+        {\Huge\sffamily\bfseries\selectfont\@title}\\
+            \vspace{4mm}
+        {\Large\sffamily\selectfont\@author}\\
+            \vspace{4mm}
+        {\large\sffamily\selectfont\@date}
+    \end{center}
+    \vspace{6mm}
+}
+% Adapted from https://tex.stackexchange.com/questions/483953/how-to-add-new-macros-like-author-without-editing-latex-ltx?noredirect=1&lq=1
+\makeatother
+
 
 \title{Introduction to Computer Science I - New SME Assignment Solution}
 \author{Niranjana Srinivasa Ragavan}
@@ -10,11 +132,145 @@
 
 \maketitle
 
-In this document, I have written the explanations for the questions and solutions provided in the given assignment document. I have used PythonTex package to execute the python code written within the latex.
+In this document, I have written the explanations for the questions and solutions provided in the given assignment document. I have used PythonTex package to execute the python code written within the Latex.
 My explanations are based on the assumption of prerequisite knowledge specified in the assignment.
 
 \section*{KP1. Understanding Nested List Comprehensions}
-\subsection*{KP1. Understanding Nested List Comprehensions}
+\subsection*{G1.1 (E) Predicting the Output of a Nested List Comprehension}
+
+\textbf{Question}
+
+Consider the following code snippet
+
+    \begin{python}
+    nested_list = [[(i + j) ** 2 for j in range(1, 4)] for i in range(1, 4)]
+    print(nested_list)
+    \end{python}
+
+What will be printed? \\
+
+\noindent\textbf{Solution}
+
+\begin{python}
+Output: [[4, 9, 16], [9, 16, 25], [16, 25, 36]]
+\end{python}  \\
+
+\noindent\textbf{Explanation}
+
+\subsection*{G1.2 (M) Converting a \texttt{for} Loop to a Nested List Comprehension}
+
+\textbf{Question}
+
+Rewrite the following \texttt{for} loop as a nested list comprehension:  
+
+    \begin{python}
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    new_matrix = []
+    for row in matrix:
+        new_row = []
+        for num in row:
+            new_row.append(num + 2)
+        new_matrix.append(new_row)
+    \end{python}
+
+\noindent\textbf{Solution}
+
+\begin{python}
+new_matrix = [[num + 2 for num in row] for row in matrix]
+\end{python}  \\
+
+\noindent\textbf{Explanation}
+
+\section*{KP2. Using Nested List Comprehensions with Strings}
+\subsection*{G2.1 (E) Predicting Output for Uppercasing Nested Words}
+
+\textbf{Question}
+
+What will be printed when the following code is run?
+
+    \begin{python}
+    sentence = "I am happy"
+    words = [[char.upper() for char in word] for word in sentence.split()]
+    print(words)
+
+    \end{python}
+
+\noindent\textbf{Solution}
+
+\begin{python}
+Output: [['I'], ['A', 'M'], ['H', 'A', 'P', 'P', 'Y']]
+\end{python}  \\
+
+\noindent\textbf{Explanation}
+
+\section*{KP3. Using Nested List Comprehensions with Conditions}
+\subsection*{G3.1 (E) Creating a Nested List of Filtered Words}
+
+\textbf{Question}
+
+What is the output of the following code snippet?
+
+    \begin{python}
+    words = [["cat", "elephant"], ["dog", "tiger"], ["fox", "giraffe"]]
+    long_words = [[word for word in row if len(word) > 3] for row in words]
+    print(long_words)
+    \end{python}
+
+\noindent\textbf{Solution}
+
+\begin{python}
+Output: [['elephant'], ['tiger'], ['giraffe']]
+\end{python}  \\
+
+\noindent\textbf{Explanation}
+
+\section*{KP4. Writing Code Using Nested List Comprehensions}
+\subsection*{G4.1 Writing Code for Creating Given Nested List}
+
+\textbf{Question}
+
+Write a Python program using a nested list comprehension to create a 3 x 4 grid filled with zeros and print it. \\
+
+\noindent\textbf{Solution}
+
+\begin{python}
+grid = [[0 for _ in range(4)] for _ in range(3)]
+print(grid)
+\end{python}  \\
+
+\noindent\textbf{Explanation}
+
+\subsection*{G4.2 Writing Code for Creating Given Nested List from Strings}
+
+\textbf{Question}
+
+Write a nested list comprehension that extracts only vowels from each word in a sentence, storing them in nested lists. For \texttt{sentence = "Python Is Amazing"}, the output must be \texttt{[['o'], ['I'], ['A', 'a', 'i']]}
+
+\noindent\textbf{Solution}
+
+\begin{python}
+sentence = "Python Is Amazing"
+vowels = "aeiouAEIOU"
+vowel_list = [[char for char in word if char in vowels] for word in sentence.split()]
+print(vowel_list)
+\end{python}  \\
+
+\noindent\textbf{Explanation}
+
+\subsection*{G4.3 Writing Code for Creating Given Nested List with Conditionals}
+
+\textbf{Question}
+
+Write a nested list comprehension that creates a 5×5 grid, but fills it with 1 if the sum of row and column indices is even, and 0 otherwise, and print it.
+
+\noindent\textbf{Solution}
+
+\begin{python}
+grid = [[1 if (i + j) % 2 == 0 else 0 for j in range(5)] for i in range(5)]
+print(grid)
+\end{python}  \\
+
+\noindent\textbf{Explanation}
 
 \end{document}
 
