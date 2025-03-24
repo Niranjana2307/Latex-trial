@@ -171,9 +171,9 @@ Recall that nested list comprehension consists of list comprehensions within a l
     \begin{pycode}
 for i in range(1, 4):
     result = []
-    print("\ni", "j", "(i+j)**2\n")
+    print("\ni  | ", "j  | ", "(i+j)**2 | \n")
     for j in range(1, 4):
-        print(i, j, (i + j) ** 2)
+        print(i, "|", j, "|", (i + j) ** 2, "|")
         print("\n")
         result.append((i + j) ** 2)
     print("\nSublist for i = {0}: {1}\n".format(i, result))
@@ -263,15 +263,14 @@ print("Words List:\n", words_list)
 result = []
 for word in words_list:
   char_list=[]
-  print("\nword\t","char\t","upper\t".expandtabs(4))
+  print("\nword | ","char | ","upper  | ".expandtabs(4))
   for char in word:
-    print("\n{0}\t {1}\t {2}\t".format(word, char, char.upper()).expandtabs(4))
+    print("\n{0} |   {1}  |   {2}   |  ".format(word, char, char.upper()).expandtabs(4))
     char_list.append(char.upper())  # Convert each char in word to uppercase
   print(f"\nSublist '{word}':", char_list)  
     \end{pycode}
     \end{tcolorbox} 
 \end{itemize}
-
 
 
 
@@ -296,6 +295,32 @@ Output: [['elephant'], ['tiger'], ['giraffe']]
 
 \noindent\textbf{Explanation}
 
+\begin{itemize}
+    \item Method \colorbox{gray!20}{\texttt{len(word)}} finds the length of the word.
+    \item \textbf{Outer comprehension:} It iterates through each sublist (\texttt{row}) in the list \texttt{words}.
+    \item \textbf{Inner comprehension:} It iterates through each \texttt{word} in the \texttt{row} and selects the word if the length of the word is greater than $3$ \colorbox{gray!20}{\texttt{len(word)>3}}.
+    The selected words form the sublist.
+    \item The final list (\texttt{long\_words}) is the collection of sublists of the selected words.
+    \item \textbf{Step by step evaluation}
+    \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
+    \begin{pycode}
+words = [["cat", "elephant"], ["dog", "tiger"], ["fox", "giraffe"]]
+result = []
+for row in words:
+  long_words=[]
+  print("\nrow |","word |")
+  for word in row:
+    if len(word)>3:
+          print("\n{0} | {1} |".format(row, word))
+          long_words.append(word) 
+           # Convert each char in word to uppercase
+  print(f"\nSublist:{long_words}")  
+
+    \end{pycode}
+    \end{tcolorbox}
+    \item \textit{Note:} In this case, the elements are filtered based on a condition, thus, \texttt{if} condition is after the \texttt{for} loop.
+    If each element is modified based on the conditions \texttt{(if-else)}, then the conditions should come before the \texttt{for} loop 
+\end{itemize}
 \section*{KP4. Writing Code Using Nested List Comprehensions}
 \subsection*{G4.1 Writing Code for Creating Given Nested List}
 

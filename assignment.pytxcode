@@ -1,9 +1,9 @@
 =>PYTHONTEX#py#default#default#0#code#####171#
 for i in range(1, 4):
     result = []
-    print("\ni", "j", "(i+j)**2\n")
+    print("\ni  | ", "j  | ", "(i+j)**2 | \n")
     for j in range(1, 4):
-        print(i, j, (i + j) ** 2)
+        print(i, "|", j, "|", (i + j) ** 2, "|")
         print("\n")
         result.append((i + j) ** 2)
     print("\nSublist for i = {0}: {1}\n".format(i, result))
@@ -17,11 +17,24 @@ print("Words List:\n", words_list)
 result = []
 for word in words_list:
   char_list=[]
-  print("\nword\t","char\t","upper\t".expandtabs(4))
+  print("\nword | ","char | ","upper  | ".expandtabs(4))
   for char in word:
-    print("\n{0}\t {1}\t {2}\t".format(word, char, char.upper()).expandtabs(4))
+    print("\n{0} |   {1}  |   {2}   |  ".format(word, char, char.upper()).expandtabs(4))
     char_list.append(char.upper())  # Convert each char in word to uppercase
   print(f"\nSublist '{word}':", char_list)
+=>PYTHONTEX#py#default#default#2#code#####306#
+words = [["cat", "elephant"], ["dog", "tiger"], ["fox", "giraffe"]]
+result = []
+for row in words:
+  long_words=[]
+  print("\nrow |","word |")
+  for word in row:
+    if len(word)>3:
+          print("\n{0} | {1} |".format(row, word))
+          long_words.append(word)
+           # Convert each char in word to uppercase
+  print(f"\nSublist:{long_words}")
+
 =>PYTHONTEX:SETTINGS#
 version=0.18
 outputdir=pythontex-files-assignment
