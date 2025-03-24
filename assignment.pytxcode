@@ -35,6 +35,35 @@ for row in words:
            # Convert each char in word to uppercase
   print(f"\nSublist:{long_words}")
 
+=>PYTHONTEX#py#default#default#3#code#####350#
+result = []
+for i in range(3):
+  list_=[]
+  print("\nrow index | ","column index |")
+  for j in range(4):
+      list_.append(0)
+      print("\n{0}  |  {1}  |  {2}  |".format(i, j,list_))
+  print(f"\nRow:{list_}")
+
+=>PYTHONTEX#py#default#default#4#code#####394#
+sentence = "Python Is Amazing"
+vowels = "aeiouAEIOU"
+
+# Split sentence into words
+words_list = sentence.split()
+print("\nWords List:", words_list)
+
+# Process each word separately
+
+for word in words_list:
+  char_list=[]
+  print("\nword | ","char | ")
+  for char in word:
+    if char in vowels:
+      char_list.append(char)
+      print("\n{0} | {1} |".format(word, char))
+  print(f"\nSublist: {char_list}")
+
 =>PYTHONTEX:SETTINGS#
 version=0.18
 outputdir=pythontex-files-assignment

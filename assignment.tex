@@ -337,6 +337,30 @@ print(grid)
 
 \noindent\textbf{Explanation}
 
+\begin{itemize}
+    \item Recall that Nested List Comprehension consists of list comprehensions within a list comprehension.
+    \item Here, it has been asked to create $ 3*4$ grid, which means there should be $3$ rows and $4$ columns. 
+    \item Remember that matrix is a list of rows, each row is a sublist which contains column values.
+    \item In general, Outer loop is used to create empty sublists and Inner loop is used to add or modify the values in each sublist. 
+    \item Outer comprehension should create $3$ empty rows  \colorbox{gray!20}{\texttt{for \_ in range(3)}}.
+    \item Inner comprehension should add value $0$ to $4$ columns in each row.  \colorbox{gray!20}{\texttt{[0 for \_ in range(4)]}} 
+    \item \textit{Note:} \texttt{\_} is just a regular variable, we can add any meaningful variable in that place. It is used to indicate that the loop variable is not relevant and necessary. In this case, the loop variable is not used inside the expression, thus \texttt{\_} is used.
+    \item \textbf{Step by step evaluation}
+    \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
+    \begin{pycode}
+result = []
+for i in range(3):
+  list_=[]
+  print("\nrow index | ","column index |")
+  for j in range(4):
+      list_.append(0)
+      print("\n{0}  |  {1}  |  {2}  |".format(i, j,list_))
+  print(f"\nRow:{list_}")   
+
+    \end{pycode}
+    \end{tcolorbox}
+\end{itemize}
+
 \subsection*{G4.2 Writing Code for Creating Given Nested List from Strings}
 
 \textbf{Question}
@@ -354,6 +378,41 @@ print(vowel_list)
 
 \noindent\textbf{Explanation}
 
+\begin{itemize}
+    \item It has been asked to create a list of lists. Each sublist should contain only the vowels from each word of the given sentence.
+    \item Remember that Method \colorbox{gray!20}{\texttt{sentence.split()}} splits the sentence and creates a \textbf{list} of individual words.
+    \item Given sentence is \colorbox{gray!20}{\texttt{"Python is amazing"}}. 
+    \item It is necessary to define the list (or any iterable) of vowels for the comparison. 
+    \item Here, it is defined as string \colorbox{gray!20}{\texttt{vowels = "aeiouAEIOU"}}. Note that, in Python, string is an iterable. 
+    \item Remember the outer loop is used to generate sublists, and inner loop is used to add or modify values in the sublist.
+    \item Here, the number of sublists equal to the number of words. Thus, outer comprehension should split the sentence to generate words and an empty row for each word. \colorbox{gray!20}{\texttt{[[] for word in sentence.split()]]}} 
+    \item The inner loop should select characters from each word, if the character is present in the \texttt{vowel} string. and fills the empty rows. 
+    \item Remember if it is for \textbf{filtering} in the list comprehension, then the \texttt{if} condition should come after the \texttt{for} loop. \colorbox{gray!20}{\texttt{[expression for item in iterable if condition]}}  
+    \item The inner comprehension should be \colorbox{gray!20}{\texttt{[char for char in word if char in vowels]}}.
+    \item \textbf{Step by step evaluation}
+    \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
+    \begin{pycode}
+sentence = "Python Is Amazing"
+vowels = "aeiouAEIOU"
+
+# Split sentence into words
+words_list = sentence.split()
+print("\nWords List:", words_list)  
+
+# Process each word separately
+
+for word in words_list:
+  char_list=[]
+  print("\nword | ","char | ")
+  for char in word:
+    if char in vowels: 
+      char_list.append(char)
+      print("\n{0} | {1} |".format(word, char))
+  print(f"\nSublist: {char_list}")  
+
+    \end{pycode}
+    \end{tcolorbox}
+\end{itemize}
 \subsection*{G4.3 Writing Code for Creating Given Nested List with Conditionals}
 
 \textbf{Question}

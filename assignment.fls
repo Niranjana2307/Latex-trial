@@ -481,12 +481,19 @@ INPUT ./assignment.listing
 INPUT ./_minted/C40C97FEBCC5A3B0AF6F87264E70C8F5.highlight.minted
 INPUT ./_minted/C40C97FEBCC5A3B0AF6F87264E70C8F5.highlight.minted
 INPUT _minted/C40C97FEBCC5A3B0AF6F87264E70C8F5.highlight.minted
+INPUT ./pythontex-files-assignment/py_default_default_3.stdout
+INPUT ./pythontex-files-assignment/py_default_default_3.stdout
+INPUT pythontex-files-assignment/py_default_default_3.stdout
 OUTPUT assignment.listing
 INPUT ./assignment.listing
 INPUT ./assignment.listing
 INPUT ./_minted/4DCD3B69568489985BA5C5F5B8E09495.highlight.minted
 INPUT ./_minted/4DCD3B69568489985BA5C5F5B8E09495.highlight.minted
 INPUT _minted/4DCD3B69568489985BA5C5F5B8E09495.highlight.minted
+INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT ./pythontex-files-assignment/py_default_default_4.stdout
+INPUT ./pythontex-files-assignment/py_default_default_4.stdout
+INPUT pythontex-files-assignment/py_default_default_4.stdout
 OUTPUT assignment.listing
 INPUT ./assignment.listing
 INPUT ./assignment.listing
@@ -503,5 +510,6 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
