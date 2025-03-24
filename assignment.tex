@@ -2,6 +2,7 @@
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,mathrsfs}
+\usepackage{pythontex}
 \usepackage{xparse}
 \usepackage[inline,shortlabels]{enumitem}
 \setlist{topsep=2pt,itemsep=2pt,parsep=0pt,partopsep=0pt}
@@ -155,7 +156,31 @@ What will be printed? \\
 Output: [[4, 9, 16], [9, 16, 25], [16, 25, 36]]
 \end{python}  \\
 
-\noindent\textbf{Explanation}
+\noindent\textbf{Explanation} \\
+
+Recall that nested list comprehension consists of list comprehensions within a list comprehension. Expression inside \texttt{[ ]} is called list comprehension.
+\begin{itemize}
+    \item In this code, outer list comprehension \colorbox{gray!20}{\texttt{for i in range(1, 4)}}
+    which generates values $i = 1,2,3$
+    \item For each value of \texttt{i}, inner list comprehension \colorbox{gray!20}{\texttt{ for j in range(1, 4)}}
+    generates values $j = 1,2,3$
+    \item For each pair of \texttt{i} and \texttt{j}, the expression \colorbox{gray!20}{\texttt{(i + j) ** 2}} is computed.
+    \item For each iteration of \texttt{i}, the computed result is stored as a sublist and the final result is the list of all these sublists
+    \item \textbf{Step by step evaluation}
+    \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
+    \begin{pycode}
+for i in range(1, 4):
+    result = []
+    print("\ni", "j", "(i+j)**2\n")
+    for j in range(1, 4):
+        print(i, j, (i + j) ** 2)
+        print("\n")
+        result.append((i + j) ** 2)
+    print("\nSublist for i = {0}: {1}\n".format(i, result))
+    \end{pycode}
+    \end{tcolorbox}
+\end{itemize}
+
 
 \subsection*{G1.2 (M) Converting a \texttt{for} Loop to a Nested List Comprehension}
 

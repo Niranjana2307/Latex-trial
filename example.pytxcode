@@ -1,7 +1,7 @@
-=>PYTHONTEX#py#default#default#0#code#####171#
+=>PYTHONTEX#py#default#default#0#code#####9#
 for i in range(1, 4):
     result = []
-    print("\ni", "j", "(i+j)**2\n")
+    print("i", "j", "(i+j)**2\n")
     for j in range(1, 4):
         print(i, j, (i + j) ** 2)
         print("\n")
@@ -9,7 +9,7 @@ for i in range(1, 4):
     print("\nSublist for i = {0}: {1}\n".format(i, result))
 =>PYTHONTEX:SETTINGS#
 version=0.18
-outputdir=pythontex-files-assignment
+outputdir=pythontex-files-example
 workingdir=.
 workingdirset=false
 gobble=none
