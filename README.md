@@ -7,7 +7,7 @@
 
 **Start time**: Monday 11 am PST 
 
-**End time**: (to be updated)
+**End time**: Monday 4.50 pm PST
 
 ## **Tools and packages used:** LATEX, Google Colab, and PythonTex
 
