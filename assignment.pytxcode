@@ -39,7 +39,7 @@ for row in words:
 result = []
 for i in range(3):
   list_=[]
-  print("\nrow index | ","column index |")
+  print("\nrow index | ","column index | ", "row |")
   for j in range(4):
       list_.append(0)
       print("\n{0}  |  {1}  |  {2}  |".format(i, j,list_))
@@ -63,6 +63,20 @@ for word in words_list:
       char_list.append(char)
       print("\n{0} | {1} |".format(word, char))
   print(f"\nSublist: {char_list}")
+
+=>PYTHONTEX#py#default#default#5#code#####447#
+result = []
+for i in range(5):
+  list_=[]
+  print("\nrow index | ","column index |", "expression |", "row")
+  for j in range(5):
+    if (i + j) % 2 == 0:
+      list_.append(1)
+    else:
+      list_.append(0)
+    print("\n{0}  |  {1}  |  {2}  |  {3}  |".format(i, j, (i+j)%2 , list_))
+  print(f"\nRow:{list_}")
+
 
 =>PYTHONTEX:SETTINGS#
 version=0.18

@@ -500,6 +500,9 @@ INPUT ./assignment.listing
 INPUT ./_minted/06EC138C7E11EDE7305E3E06556F182A.highlight.minted
 INPUT ./_minted/06EC138C7E11EDE7305E3E06556F182A.highlight.minted
 INPUT _minted/06EC138C7E11EDE7305E3E06556F182A.highlight.minted
+INPUT ./pythontex-files-assignment/py_default_default_5.stdout
+INPUT ./pythontex-files-assignment/py_default_default_5.stdout
+INPUT pythontex-files-assignment/py_default_default_5.stdout
 INPUT assignment.aux
 INPUT ./assignment.out
 INPUT ./assignment.out

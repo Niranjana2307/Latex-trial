@@ -351,7 +351,7 @@ print(grid)
 result = []
 for i in range(3):
   list_=[]
-  print("\nrow index | ","column index |")
+  print("\nrow index | ","column index | ", "row |")
   for j in range(4):
       list_.append(0)
       print("\n{0}  |  {1}  |  {2}  |".format(i, j,list_))
@@ -427,6 +427,40 @@ print(grid)
 \end{python}  \\
 
 \noindent\textbf{Explanation}
+
+\begin{itemize}
+    \item Recall that Nested List Comprehension consists of list comprehensions within a list comprehension.
+    \item Here, it has been asked to create $ 5*5$ grid, which means there should be $5$ rows and $5$ columns. 
+    \item Remember that matrix is a list of rows, each row is a sublist which contains column values.
+    \item In general, Outer loop is used to create empty sublists and Inner loop is used to add or modify the values in each sublist. 
+    \item Outer comprehension should create $5$ empty rows  \colorbox{gray!20}{\texttt{[[]for i in range(5)}]}.
+    \item Inner comprehension should populate the $5$ column values in each row. It should insert $1$ if the sum of row and column indices is even, else it 
+    should insert $0$, in the columns in each row.
+    \item The sum $i + j$ is even, if the remainder is $0$ when the $i + j$  is divided by $2$.
+    \item The modulo operator \colorbox{gray!20}{\texttt{\%}} is used to get the remainder of division of two numbers. 
+    \item Thus, the expression would be \colorbox{gray!20}{\texttt{(i+j)\%2}}.
+    \item The condition to check whether the sum is even or not: \colorbox{gray!20}{\texttt{1 if (i+j)\%2==0 else 0}}.
+    \item Remember if it is for \textbf{modifying} each value in the list comprehension, then the \texttt{if-else} condition should come before the \texttt{for} loop. \colorbox{gray!20}{\texttt{[expression if condition else expression for item in iterable]}}  
+    \item Inner comprehension would be \colorbox{gray!20}{\texttt{[1 if (i+j)\%2==0 else 0 for j in range(5)]}}.
+    \item \textbf{Step by step evaluation} 
+    \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
+    \begin{pycode}
+result = []
+for i in range(5):
+  list_=[]
+  print("\nrow index | ","column index |", "expression |", "row")
+  for j in range(5):
+    if (i + j) % 2 == 0:
+      list_.append(1)
+    else:
+      list_.append(0)
+    print("\n{0}  |  {1}  |  {2}  |  {3}  |".format(i, j, (i+j)%2 , list_))
+  print(f"\nRow:{list_}")    
+ 
+
+    \end{pycode}
+    \end{tcolorbox}
+\end{itemize}
 
 \end{document}
 

@@ -1,5 +1,5 @@
 
-row index |  column index |
+row index |  column index |  row |
 
 0  |  0  |  [0]  |
 
@@ -11,7 +11,7 @@ row index |  column index |
 
 Row:[0, 0, 0, 0]
 
-row index |  column index |
+row index |  column index |  row |
 
 1  |  0  |  [0]  |
 
@@ -23,7 +23,7 @@ row index |  column index |
 
 Row:[0, 0, 0, 0]
 
-row index |  column index |
+row index |  column index |  row |
 
 2  |  0  |  [0]  |
 
