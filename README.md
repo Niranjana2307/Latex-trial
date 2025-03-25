@@ -9,7 +9,9 @@
 
 **End time**: Monday 4.50 pm PST
 
-## **Tools and packages used:** LATEX, Google Colab, and PythonTex
+## **Tools and packages used:** 
+
+LaTeX, Google Colab, and PythonTeX
 
 ## **Explanation of files**
 
