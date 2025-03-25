@@ -1,9 +1,9 @@
-# Ignore everything
-*
+# Ignore everything.
+/*
 
 # Allow only specific files
-!assignment.ipynb
+!.gitignore
+assignment.ipynb
 !assignment.tex
 !README.md
 !assignment.pdf
-!.gitignore
