@@ -1,6 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
-\PYG{n}{sentence} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Python Is Amazing}\PYG{l+s+s2}{\PYGZdq{}}
-\PYG{n}{vowels} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{aeiouAEIOU}\PYG{l+s+s2}{\PYGZdq{}}
-\PYG{n}{vowel\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{p}{[}\PYG{n}{char} \PYG{k}{for} \PYG{n}{char} \PYG{o+ow}{in} \PYG{n}{word} \PYG{k}{if} \PYG{n}{char} \PYG{o+ow}{in} \PYG{n}{vowels}\PYG{p}{]} \PYG{k}{for} \PYG{n}{word} \PYG{o+ow}{in} \PYG{n}{sentence}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{p}{)}\PYG{p}{]}
-\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{vowel\PYGZus{}list}\PYG{p}{)}
-\end{MintedVerbatim}

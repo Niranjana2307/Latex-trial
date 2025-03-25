@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
-\PYG{n}{new\PYGZus{}matrix} \PYG{o}{=} \PYG{p}{[}\PYG{p}{[}\PYG{n}{num} \PYG{o}{+} \PYG{l+m+mi}{2} \PYG{k}{for} \PYG{n}{num} \PYG{o+ow}{in} \PYG{n}{row}\PYG{p}{]} \PYG{k}{for} \PYG{n}{row} \PYG{o+ow}{in} \PYG{n}{matrix}\PYG{p}{]}
-\end{MintedVerbatim}

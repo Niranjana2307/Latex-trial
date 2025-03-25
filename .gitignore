@@ -1,9 +1,11 @@
-# Ignore everything.
-/*
 
-# Allow only specific files
-!.gitignore
-assignment.ipynb
-!assignment.tex
-!README.md
-!assignment.pdf
+_minted/
+ pythontex-files-assignment/ 
+ assignment.aux 
+ assignment.fdb_latexmk 
+ assignment.fls 
+ assignment.listing 
+ assignment.log 
+ assignment.out 
+ assignment.pytxcode 
+ assignment.synctex.gz 
