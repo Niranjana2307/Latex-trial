@@ -341,8 +341,8 @@ print(grid)
     \item Recall that Nested List Comprehension consists of list comprehensions within a list comprehension.
     \item Here, it has been asked to create $ 3*4$ grid, which means there should be $3$ rows and $4$ columns. 
     \item Remember that matrix is a list of rows, each row is a sublist which contains column values.
-    \item In general, Outer loop is used to create empty sublists and Inner loop is used to add or modify the values in each sublist. 
-    \item Outer comprehension should create $3$ empty rows  \colorbox{gray!20}{\texttt{[[] for \_ in range(3)]}}.
+    \item In general, Outer loop is used to create sublists and Inner loop is used to add or modify the values in each sublist. 
+    \item Outer comprehension should create $3$ rows  \colorbox{gray!20}{\texttt{[.. for \_ in range(3)]}}.
     \item Inner comprehension should insert value $0$ to the $4$ columns in each row.  \colorbox{gray!20}{\texttt{[0 for \_ in range(4)]}} 
     \item \textit{Note:} \texttt{\_} is just a regular variable, we can add any meaningful variable in that place. It is used to indicate that the loop variable is not relevant. In this case, the loop variable is not used inside the expression, thus \texttt{\_} is used as a loop variable
     \item \textbf{Step by step evaluation}
@@ -385,8 +385,8 @@ print(vowel_list)
     \item It is necessary to define the list (or any iterable) of vowels for the comparison. 
     \item Here, it is defined as string \colorbox{gray!20}{\texttt{vowels = "aeiouAEIOU"}}. Note that, in Python, string is an iterable. 
     \item Recall that the outer loop is used to generate sublists, and inner loop is used to add or modify values in the sublist.
-    \item Here, the number of sublists should be equal to the number of words. Thus, outer comprehension should iterate through the list of individual words and creates an empty row for each word. \colorbox{gray!20}{\texttt{[[] for word in sentence.split()]]}} 
-    \item The inner loop should select characters from each word, if the character is present in the \texttt{vowel} string and fill the empty rows. 
+    \item Here, the number of sublists should be equal to the number of words. Thus, outer comprehension should iterate through the list of individual words and creates an row for each word. \colorbox{gray!20}{\texttt{[... for word in sentence.split()]]}} 
+    \item The inner loop should select characters from each word, if the character is present in the \texttt{vowel} string and fill the rows. 
     \item Remember if it is for \textbf{filtering} in the list comprehension, then the \texttt{if} condition should come after the \texttt{for} loop. \colorbox{gray!20}{\texttt{[expression for item in iterable if condition]}}  
     \item The inner comprehension should be \colorbox{gray!20}{\texttt{[char for char in word if char in vowels]}}.
     \item \textbf{Step by step evaluation}
@@ -432,8 +432,8 @@ print(grid)
     \item Recall that Nested List Comprehension consists of list comprehensions within a list comprehension.
     \item Here, it has been asked to create $ 5*5$ grid, which means there should be $5$ rows and $5$ columns. 
     \item Remember that matrix is a list of rows, each row is a sublist which contains column values.
-    \item In general, Outer loop is used to create empty sublists and Inner loop is used to add or modify the values in each sublist. 
-    \item Outer comprehension should create $5$ empty rows  \colorbox{gray!20}{\texttt{[[]for i in range(5)}]}.
+    \item In general, Outer loop is used to create sublists and Inner loop is used to add or modify the values in each sublist. 
+    \item Outer comprehension should create $5$ rows  \colorbox{gray!20}{\texttt{[... for i in range(5)}]}.
     \item Inner comprehension should populate the $5$ column values in each row. It should insert $1$ if the sum of row and column indices is even, else it 
     should insert $0$, in the columns in each row.
     \item The sum $i + j$ is even, if the remainder is $0$ when $i + j$  is divided by $2$.
