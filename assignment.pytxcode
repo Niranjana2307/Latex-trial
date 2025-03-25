@@ -21,7 +21,7 @@ for word in words_list:
   for char in word:
     print("\n{0} |   {1}  |   {2}   |  ".format(word, char, char.upper()).expandtabs(4))
     char_list.append(char.upper())  # Convert each char in word to uppercase
-  print(f"\nSublist '{word}':", char_list)
+  print(f"\nSublist for'{word}':", char_list)
 =>PYTHONTEX#py#default#default#2#code#####306#
 words = [["cat", "elephant"], ["dog", "tiger"], ["fox", "giraffe"]]
 result = []

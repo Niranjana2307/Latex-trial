@@ -133,7 +133,7 @@
 
 \maketitle
 
-In this document, I have written the explanations for the questions and solutions provided in the given assignment document. I have used PythonTex package to execute the python code written within the Latex.
+In this document, I have written the explanations for the questions and solutions provided in the given assignment document. I have used PythonTeX package to execute the python code written within the LaTeX.
 My explanations are based on the assumption of prerequisite knowledge specified in the assignment.
 
 \section*{KP1. Understanding Nested List Comprehensions}
@@ -158,15 +158,15 @@ Output: [[4, 9, 16], [9, 16, 25], [16, 25, 36]]
 
 \noindent\textbf{Explanation} \\
 
-Recall that nested list comprehension consists of list comprehensions within a list comprehension. Expression inside \texttt{[]} is called list comprehension.
+Recall that nested list comprehension consists of list comprehensions within a list comprehension. Expressions inside \texttt{[]} are called list comprehensions.
 \begin{itemize}
     \item In this code, the outer list comprehension \colorbox{gray!20}{\texttt{for i in range(1, 4)}}
-    which generates values $i = 1,2,3$.
+    generates values $i = 1,2,3$.
     \item For each value of \texttt{i}, the inner list comprehension \colorbox{gray!20}{\texttt{ for j in range(1, 4)}}
     generates values $j = 1,2,3$.
     \item For each pair of \texttt{i} and \texttt{j}, the expression \colorbox{gray!20}{\texttt{(i + j) ** 2}} is computed.
     \item For each iteration of \texttt{i}, the computed result is stored as a sublist and the final result is the list of all these sublists.
-    \item \textbf{Step by step evaluation}
+    \item \textbf{Step-by-step evaluation}
     \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
     \begin{pycode}
 for i in range(1, 4):
@@ -181,15 +181,15 @@ for i in range(1, 4):
     \end{tcolorbox}
     \item \textbf{Scope of the variables:} 
     \begin{itemize}
-        \item In python, in the nested \texttt{for} loop, the inner loop has the same scope as that of the enclosing scope. Thus, outer loop variables defined before the inner loop can be directly referenced by the inner loop.   
-        \item While in nested list comprehension, each list comprehension creates its own local scope. 
-        \item Still, the inner list comprehension can access the variables local to the outer comprehension. This is due to the property called \textbf{Closures}. The inner list comprehension can access the variables from the enclosing scope.
-        \item In this code, the non-local variable \texttt{i} which is in the scope of outer comprehension,  can be accessed as a free variable by inner list comprehension. This means, \texttt{i} is not bound to the inner comprehension, but is stored in a closure. This repeats for each iteration of \texttt{i}.
+        \item In python, the inner loop in the nested \texttt{for} loop shares the same scope as the outer enclosing scope. Thus, outer loop variables defined before the inner loop can be directly referenced by the inner loop.   
+        \item In nested list comprehension, each list comprehension creates its own local scope. 
+        \item Still, the inner list comprehension can access the variables from the outer comprehension, due to a property called \textbf{Closures}. The inner list comprehension can access the variables from the enclosing scope.
+        \item In this code, the non-local variable \texttt{i}, which is in the scope of outer comprehension,  can be accessed as a free variable by inner list comprehension. This means, \texttt{i} is not bound to the inner comprehension, but is stored in a closure. This repeats for each iteration of \texttt{i}.
         \item This can be evident from this line of byte-level code  \colorbox{gray!20}{\texttt{LOAD\_CLOSURE 1 (i)}}.
     \end{itemize}
     
 \end{itemize} 
-\bigskip  
+
 \subsection*{G1.2 (M) Converting a \texttt{for} Loop to a Nested List Comprehension}
 
 \textbf{Question}
@@ -216,10 +216,10 @@ new_matrix = [[num + 2 for num in row] for row in matrix]
 
 \begin{itemize}
     \item \textbf{Explanation of nested \texttt{for} loops:} The outer \texttt{for} loop iterates through each row in the matrix.
-    The inner loop iterates through each number in the row and creates a new row by appending $2$ to each number in the original row.
-    The new rows are appended to create the new matrix. 
+    The inner loop iterates through each number in the row and creates a new row by adding $2$ to each number in the original row.
+    The new rows are collected to create the new matrix. 
     \item \textbf{Creating list comprehension:} Replace the outer loop with \colorbox{gray!20}{\texttt{[..for row in matrix]}}. In the inner loop, for each \texttt{num} in row,  \colorbox{gray!20}{\texttt{num + $2$}} expression should be executed. Replace the inner loop  with \colorbox{gray!20}{\texttt{[num + $2$ for num in row]}}.
-    \item Finally, all the modified rows are appended to create \texttt{new\_matrix}. The list comprehension implicitly builds the list and there is no need for  \colorbox{gray!20}{\texttt{append}} function.
+    \item Finally, all the modified rows are collected to create \texttt{new\_matrix}. The list comprehension implicitly builds the list and there is no need for  \colorbox{gray!20}{\texttt{append}} function.
    
    
 \end{itemize}
@@ -246,8 +246,8 @@ Output: [['I'], ['A', 'M'], ['H', 'A', 'P', 'P', 'Y']]
 \noindent\textbf{Explanation}
 
 \begin{itemize}
-    \item Method \colorbox{gray!20}{\texttt{sentence.split()}} splits the sentence and creates a \textbf{list} of individual words.
-    \item Methods \colorbox{gray!20}{\texttt{char.upper()}} turns lowercase character into an uppercase character.
+    \item \colorbox{gray!20}{\texttt{sentence.split()}} method splits the sentence and creates a \textbf{list} of individual words.
+    \item \colorbox{gray!20}{\texttt{char.upper()}} method turns lowercase character into an uppercase character.
     \item \textbf{Outer comprehension:} It iterates through each \texttt{word} in the list of individual words created by \colorbox{gray!20}{\texttt{.split()}} method.
     \item \textbf{Inner comprehension:} It iterates through each \texttt{char} in the \texttt{word} and converts the character into uppercase using \colorbox{gray!20}{\texttt{.upper()}} method. If the \texttt{char} is already in uppercase, it does nothing. For each word, the list of its uppercase characters is created.
     \item The final list is the collection of sublists of uppercase letters of individual words.
@@ -267,7 +267,7 @@ for word in words_list:
   for char in word:
     print("\n{0} |   {1}  |   {2}   |  ".format(word, char, char.upper()).expandtabs(4))
     char_list.append(char.upper())  # Convert each char in word to uppercase
-  print(f"\nSublist '{word}':", char_list)  
+  print(f"\nSublist for'{word}':", char_list)  
     \end{pycode}
     \end{tcolorbox} 
 \end{itemize}
@@ -296,7 +296,7 @@ Output: [['elephant'], ['tiger'], ['giraffe']]
 \noindent\textbf{Explanation}
 
 \begin{itemize}
-    \item Method \colorbox{gray!20}{\texttt{len(word)}} finds the length of the word.
+    \item \colorbox{gray!20}{\texttt{len(word)}} method finds the length of the word.
     \item \textbf{Outer comprehension:} It iterates through each sublist (\texttt{row}) in the list \texttt{words}.
     \item \textbf{Inner comprehension:} It iterates through each \texttt{word} in the \texttt{row} and selects the word if the length of the word is greater than $3$ \colorbox{gray!20}{\texttt{len(word)>3}}.
     The selected words form the sublist.
@@ -318,8 +318,8 @@ for row in words:
 
     \end{pycode}
     \end{tcolorbox}
-    \item \textit{Note:} In this case, the elements are filtered based on a condition, thus, \texttt{if} condition is after the \texttt{for} loop.
-    If each element is modified based on the conditions \texttt{(if-else)}, then the conditions should come before the \texttt{for} loop 
+    \item \textit{Note:} In this case, the elements are filtered based on a condition, thus the \texttt{if} condition comes after the \texttt{for} loop.
+    If each element in the list is modified based on the conditions \texttt{(if-else)}, then the conditions should come before the \texttt{for} loop 
 \end{itemize}
 \section*{KP4. Writing Code Using Nested List Comprehensions}
 \subsection*{G4.1 Writing Code for Creating Given Nested List}
@@ -342,9 +342,9 @@ print(grid)
     \item Here, it has been asked to create $ 3*4$ grid, which means there should be $3$ rows and $4$ columns. 
     \item Remember that matrix is a list of rows, each row is a sublist which contains column values.
     \item In general, Outer loop is used to create empty sublists and Inner loop is used to add or modify the values in each sublist. 
-    \item Outer comprehension should create $3$ empty rows  \colorbox{gray!20}{\texttt{for \_ in range(3)}}.
-    \item Inner comprehension should add value $0$ to $4$ columns in each row.  \colorbox{gray!20}{\texttt{[0 for \_ in range(4)]}} 
-    \item \textit{Note:} \texttt{\_} is just a regular variable, we can add any meaningful variable in that place. It is used to indicate that the loop variable is not relevant and necessary. In this case, the loop variable is not used inside the expression, thus \texttt{\_} is used.
+    \item Outer comprehension should create $3$ empty rows  \colorbox{gray!20}{\texttt{[[] for \_ in range(3)]}}.
+    \item Inner comprehension should insert value $0$ to the $4$ columns in each row.  \colorbox{gray!20}{\texttt{[0 for \_ in range(4)]}} 
+    \item \textit{Note:} \texttt{\_} is just a regular variable, we can add any meaningful variable in that place. It is used to indicate that the loop variable is not relevant. In this case, the loop variable is not used inside the expression, thus \texttt{\_} is used as a loop variable
     \item \textbf{Step by step evaluation}
     \begin{tcolorbox}[colback=gray!20, colframe=gray!50, sharp corners=southwest]
     \begin{pycode}
@@ -380,13 +380,13 @@ print(vowel_list)
 
 \begin{itemize}
     \item It has been asked to create a list of lists. Each sublist should contain only the vowels from each word of the given sentence.
-    \item Remember that Method \colorbox{gray!20}{\texttt{sentence.split()}} splits the sentence and creates a \textbf{list} of individual words.
+    \item Remember that \colorbox{gray!20}{\texttt{sentence.split()}} method splits the sentence and creates a \textbf{list} of individual words.
     \item Given sentence is \colorbox{gray!20}{\texttt{"Python is amazing"}}. 
     \item It is necessary to define the list (or any iterable) of vowels for the comparison. 
     \item Here, it is defined as string \colorbox{gray!20}{\texttt{vowels = "aeiouAEIOU"}}. Note that, in Python, string is an iterable. 
-    \item Remember the outer loop is used to generate sublists, and inner loop is used to add or modify values in the sublist.
-    \item Here, the number of sublists equal to the number of words. Thus, outer comprehension should split the sentence to generate words and an empty row for each word. \colorbox{gray!20}{\texttt{[[] for word in sentence.split()]]}} 
-    \item The inner loop should select characters from each word, if the character is present in the \texttt{vowel} string. and fills the empty rows. 
+    \item Recall that the outer loop is used to generate sublists, and inner loop is used to add or modify values in the sublist.
+    \item Here, the number of sublists should be equal to the number of words. Thus, outer comprehension should iterate through the list of individual words and creates an empty row for each word. \colorbox{gray!20}{\texttt{[[] for word in sentence.split()]]}} 
+    \item The inner loop should select characters from each word, if the character is present in the \texttt{vowel} string and fill the empty rows. 
     \item Remember if it is for \textbf{filtering} in the list comprehension, then the \texttt{if} condition should come after the \texttt{for} loop. \colorbox{gray!20}{\texttt{[expression for item in iterable if condition]}}  
     \item The inner comprehension should be \colorbox{gray!20}{\texttt{[char for char in word if char in vowels]}}.
     \item \textbf{Step by step evaluation}
@@ -436,7 +436,7 @@ print(grid)
     \item Outer comprehension should create $5$ empty rows  \colorbox{gray!20}{\texttt{[[]for i in range(5)}]}.
     \item Inner comprehension should populate the $5$ column values in each row. It should insert $1$ if the sum of row and column indices is even, else it 
     should insert $0$, in the columns in each row.
-    \item The sum $i + j$ is even, if the remainder is $0$ when the $i + j$  is divided by $2$.
+    \item The sum $i + j$ is even, if the remainder is $0$ when $i + j$  is divided by $2$.
     \item The modulo operator \colorbox{gray!20}{\texttt{\%}} is used to get the remainder of division of two numbers. 
     \item Thus, the expression would be \colorbox{gray!20}{\texttt{(i+j)\%2}}.
     \item The condition to check whether the sum is even or not: \colorbox{gray!20}{\texttt{1 if (i+j)\%2==0 else 0}}.
